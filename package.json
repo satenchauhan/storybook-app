@@ -9,9 +9,17 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "dotenv -- cross-var npx chromatic --project-token=%VITE_CHRM_API_KEY%",
+    "chromatic-rebuild": "dotenv -- cross-var npx chromatic --project-token=%VITE_CHRM_API_KEY% --force-rebuild",
+    "show-key": "dotenv -- cross-var echo  %CHROMATICE_API_KEY%",
+    "show-URL": "dotenv -- cross-var echo  %CHROMATICE_API_URL%"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
+    "cross-var": "^1.1.0",
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
